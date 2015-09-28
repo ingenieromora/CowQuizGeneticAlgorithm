@@ -18,7 +18,7 @@ def eval_func(chromosome):
 
 genome = G2DList.G2DList(7,7)
 genome.evaluator.set(eval_func)
-genome.setParams(rangemin=0, rangemax=49)
+genome.setParams(rangemin=1, rangemax=49)
 ga = GSimpleGA.GSimpleGA(genome)
 ga.evolve(freq_stats=10)
 print ga.bestIndividual()
