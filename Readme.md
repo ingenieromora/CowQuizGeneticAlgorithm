@@ -8,7 +8,7 @@
 
 >El pastor tiene 7 hijos y quiere dejarles a cada uno el mismo número de vacas y cuya producción de leche sea igual en todos los casos.
 
->¿Cuántas vacas dejó a cada hijo? 
+>¿Cómo distribuyó las vacas que dejó a cada hijo? 
 
 ##Requirements
 Python 2.X installed
