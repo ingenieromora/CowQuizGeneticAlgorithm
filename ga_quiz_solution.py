@@ -21,13 +21,13 @@ def eval_func(chromosome):
     cowList = list(xrange(49))
     repeatedValues = getNumberRepeatedValues(chromosome, cowList)
 
-    if repeatedValues < 30:
+    if repeatedValues > 30:
         score +=10
-    elif repeatedValues < 20:
+    elif repeatedValues > 20:
         score+=20
-    elif repeatedValues < 10:
+    elif repeatedValues > 10:
         score+=30
-    elif repeatedValues < 40:
+    elif repeatedValues > 5:
         score+=30
     elif repeatedValues == 0:
         score+=1000
