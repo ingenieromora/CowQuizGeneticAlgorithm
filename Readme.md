@@ -29,7 +29,7 @@ sudo easy_install pyevolve
 python ga_quiz_solution.py 
 ```
 ##Important Considerations
-Selector:
-CrossOver:
-Mutator:
-Fitness Solution:
+Initial Population: 100
+Selector: Ranking Selector
+CrossOver: Uniform Crossover
+Mutator: Swap Mutator
