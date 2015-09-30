@@ -2,7 +2,7 @@ from pyevolve import G2DList, GSimpleGA;
 from pyevolve.DBAdapters import DBFileCSV, DBURLPost
 
 def eval_func(chromosome):
-    """Fitness Function"""
+    """Fitness Function - Score points depending milk distribution & number of repeated values"""
     score = getScorePointsByDistribution(chromosome)
 
     possible_values = list(xrange(49))
@@ -37,9 +37,9 @@ def getScorePointsOmittingRepetition(chromosome, possibleValues):
     elif repeatedValues > 10:
         score+=33
     elif repeatedValues > 5:
-        score+=34
+        score+=44
     elif repeatedValues == 0:
-        score+=35
+        score+=55
 
     return score;
 
