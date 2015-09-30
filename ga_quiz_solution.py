@@ -1,6 +1,15 @@
 from pyevolve import G2DList, GSimpleGA;
 from pyevolve.DBAdapters import DBFileCSV, DBURLPost
 
+def eval_func(chromosome):
+    """Fitness Function"""
+    score = getScorePointsByDistribution(chromosome)
+
+    possible_values = list(xrange(49))
+    score += getScorePointsOmittingRepetition(chromosome, possible_values)
+
+    return score
+
 
 def getScorePointsByDistribution(chromosome):
     """Score points counting the distribution of milk. With a better distribution, it returns higher results """
@@ -42,15 +51,6 @@ def getNumberRepeatedValues(matrix, listValues):
                 listValues.remove(columnValue)
     return len(listValues);
 
-
-def eval_func(chromosome):
-    """Fitness Function"""
-    score = getScorePointsByDistribution(chromosome)
-
-    possible_values = list(xrange(49))
-    score += getScorePointsOmittingRepetition(chromosome, possible_values)
-
-    return score
 
 
 """Main Workflow"""
